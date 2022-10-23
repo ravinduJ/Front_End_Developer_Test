@@ -1,0 +1,22 @@
+
+
+table {
+    width: 100%;
+  }
+
+  .profile-pic{
+    width:80px;
+    height: 80px;
+    object-fit: cover;
+  }
+
+  .heading{
+    font-size: 35px;
+    padding: 30px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+
+  }
+.head-container{
+  width: 100%;
+}

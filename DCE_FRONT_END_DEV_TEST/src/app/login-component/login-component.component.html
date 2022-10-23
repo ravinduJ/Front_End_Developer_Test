@@ -1,0 +1,114 @@
+<div class="header">
+
+    <!-- <div ><h1 class="heading">Login & Registration</h1></div> -->
+    <!--Content before waves-->
+    <div class="inner-header flex">
+
+        
+        <div fxLayoutAlign="space-evenly center" fxFlexFill>
+            <h1 class="heading">Login & Registration</h1>
+            <mat-tab-group class="mat-tab-spacer" backgroundColor="primary"
+                color="warn">
+                <mat-tab label="Sign in">
+                    <mat-card>
+                        <form fxLayoutAlign="stretch" fxLayout="column"
+                            class="login-form">
+                            <mat-form-field appearance="outline">
+                                <mat-label>Username</mat-label>
+                                <input matInput placeholder="pat@example.com"
+                                    [formControl]="loginEmail"
+                                    id="loginPassword" required>
+                                <mat-error *ngIf="loginEmail.invalid">{{getErrorMessageLogin()}}</mat-error>
+                            </mat-form-field>
+
+                            <mat-form-field appearance="outline">
+                                <mat-label>Password</mat-label>
+                                <input matInput type="password"
+                                    [formControl]="loginPassword"
+                                    id="loginPassword">
+                            </mat-form-field>
+                            <button mat-raised-button type="submit"
+                                color="primary"
+                                class="button-style" (click)="userLogin()">Sign
+                                in</button>
+                        </form>
+
+
+
+                    </mat-card>
+                </mat-tab>
+                <mat-tab label="Sign up">
+
+                    <mat-card>
+                        <form fxLayoutAlign="stretch" fxLayout="column"
+                            class="login-form">
+
+                            <mat-form-field appearance="outline">
+                                <mat-label>Username</mat-label>
+                                <input matInput type="text" id="name"
+                                    [formControl]="username">
+                            </mat-form-field>
+
+                            <mat-form-field appearance="outline">
+                                <mat-label>email</mat-label>
+                                <input matInput placeholder="pat@example.com"
+                                    [formControl]="email" required>
+                                <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+                            </mat-form-field>
+
+                            <!-- <mat-form-field appearance="outline">
+                                <mat-label>Password</mat-label>
+                                <input matInput type="password" id="password"
+                                    [formControl]="password">
+                            </mat-form-field> -->
+
+                            <mat-form-field appearance="outline">
+                                <mat-label>Password</mat-label>
+                                <input matInput type="password"
+                                    id="confirmPassword"
+                                    [formControl]="confirmPassword">
+                            </mat-form-field>
+                            <button mat-raised-button type="submit"
+                                color="primary"
+                                class="button-style" (click)="userSignup()">Sign
+                                up</button>
+                        </form>
+
+
+
+                    </mat-card>
+
+                </mat-tab>
+
+            </mat-tab-group>
+
+        </div>
+
+    </div>
+
+    <!--Waves Container-->
+    <div>
+        <svg class="waves" xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            viewBox="0 24 150 28" preserveAspectRatio="none"
+            shape-rendering="auto">
+            <defs>
+                <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18
+                    58-18 88-18 58 18 88 18 v44h-352z" />
+                </defs>
+                <g class="parallax">
+                    <use xlink:href="#gentle-wave" x="48" y="0"
+                        fill="rgba(255,255,255,0.7" />
+                        <use xlink:href="#gentle-wave" x="48" y="3"
+                            fill="rgba(255,255,255,0.5)" />
+                            <use xlink:href="#gentle-wave" x="48" y="5"
+                                fill="rgba(255,255,255,0.3)" />
+                                <use xlink:href="#gentle-wave" x="48" y="7"
+                                    fill="#fff" />
+                                </g>
+                            </svg>
+                        </div>
+                        <!--Waves end-->
+
+                    </div>
+                    <!--Header ends-->

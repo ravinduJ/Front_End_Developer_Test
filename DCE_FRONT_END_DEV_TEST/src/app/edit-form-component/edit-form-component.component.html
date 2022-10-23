@@ -1,0 +1,32 @@
+<h2 mat-dialog-title>Update User Details</h2>
+<mat-dialog-content class="mat-typography">
+  <div>
+    <mat-card>
+      <form fxLayoutAlign="stretch" fxLayout="column"
+          class="login-form">
+
+          <mat-form-field appearance="outline">
+            <mat-label>Name</mat-label>
+            <input matInput 
+                [formControl]="username"
+                id="username">
+        </mat-form-field>
+
+          <mat-form-field appearance="outline">
+              <mat-label>Email</mat-label>
+              <input matInput 
+                  [formControl]="email"
+                  id="email">
+          </mat-form-field>
+      </form>
+
+
+
+  </mat-card>
+  </div>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-raised-button color="warn" mat-dialog-close >Close</button>
+  <button mat-raised-button  (click) = "updateUserDetails()" color="primary">Update</button>
+</mat-dialog-actions>
+
